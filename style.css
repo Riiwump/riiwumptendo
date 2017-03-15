@@ -51,8 +51,8 @@ canvas {
 	margin: 2% auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 5%; right: 0;
-	width: 55%;
-	height: 75%;
+	width: 62.5%;
+	height: 85%;
 	border-radius: 25px;
 	background-color: rgba(150, 150, 180, 0.5);
 }
