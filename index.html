@@ -73,39 +73,6 @@ function audioFade() {
 				<iframe id="iframe" src="" frameborder="0" allowfullscreen autoplay="1"></iframe>
 						<a href="#" class="button" onclick="videoStop();" onmouseover="hover.play();"></a>
 							<div id="video-list-container" style="overflow-y: scroll;">
-								<a class="videolink yellow" href="#" onmouseover="hover.play();"onclick="videoPlay('ZeAYr3CN57w')">How to Get NotDiscord [TUT]</a><br>
-								<a class="videolink yellow" href="#" onmouseover="hover.play();"onclick="videoPlay('kkP9G85KLrg')">NotDiscord - New Languages</a><br>
-								<a class="videolink red" href="#" onmouseover="hover.play();"onclick="videoPlay('--nrTsh7MGg')">Whack-A-Wump - Teaser Trailer</a><br>
-								<a class="videolink red" href="#" onmouseover="hover.play();"onclick="videoPlay('IzYJ75Vmojk')">Flappy Wumpus - Halloween Patch Trailer</a><br>
-								<a class="videolink red" href="#" onmouseover="hover.play();"onclick="videoPlay('POnldqfm3Rw')">Flappy Wumpus - Launch Trailer</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('cvtf5Wbgdik')">Discord Game Night Setup Vlog (March 2017)</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('psIIWROIvtM')">Discord Nitro</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('TZiOUel0IZ0')">Discord Engineering - Voice Improvements</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('pWg1uwwtB9o')">Discord Reactions</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('DG_qaabZeQs')">Discord Party Vlog</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('FBa6ZmkHqVE')">Discord Game Night (October)</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('WQFBzlM0pQg')">Discord User Status</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('Cj51ZfNLkQI')">Discord Custom Emotes</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('eqIMuWsDqdo')">Discord PAX West Vlog</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('rWrjwUm3Oi4')">Discord Keyboard Combos</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('tLS_Y_Vk9XY')">Discord Direct Calls + Group DM</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('T-bD62K0SuA')">Discord Recent Mentions</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('QEu4w4FAGTw')">Discord 2FA</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('PwnE2OPxiTY')">Discord Right Click</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('7xvpcXvNwJs')">How to use the Discord Overlay</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('hiuhkusxLJQ')">Discord Overlay</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('HhrwPMtv8p4')">Discord PTB Zone</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('sm2S6eFymoI')">Discord Notifications Update</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('03_aHK7m6vU')">Discord Role Colors</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('JEojRvFq0f8')">Discord Digs - Ep. 37</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('sSPIMgtcQnU')">Discord - Don't Be a Broom</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('8kYdRlJb5-4')">Discord Compact Mode</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('hTp39-Wwm4M')">Discord Twitch Intergration</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('50qYI4YvlAk')">How to use Discord Roles</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('9b-CWmwGUKw')">Discord Developer Vlog (Aug 17, 2015)</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('XAWgeLF9EVQ')">Discord Message Editing</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('h7tvNC-D-04')">Discord Stop Motion Moogle Banaza</a><br>
-								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('kzKYzdTs6jo')">Discord Keybinds</a><br>
 			</div>
 	</div>
 </div>
@@ -113,5 +80,40 @@ function audioFade() {
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script src="bg.js"></script>
+	<script>
+		// Function to fetch and parse the YouTube RSS feed
+function fetchYouTubeVideos(feedUrl) {
+  const rss2jsonApiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+
+  fetch(rss2jsonApiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const videoItems = data.items;
+
+      for (let i = 0; i < videoItems.length; i++) {
+        const title = videoItems[i].title;
+        const videoId = videoItems[i].link.substr(videoItems[i].link.indexOf("=") + 1);
+
+        const videoLink = document.createElement("a");
+        videoLink.classList.add("videolink", "nintendo");
+        videoLink.href = "#";
+        videoLink.setAttribute("onmouseover", "hover.play();");
+        videoLink.setAttribute("onclick", `videoPlay('${videoId}')`);
+        videoLink.textContent = title;
+
+        const videoListContainer = document.getElementById("video-list-container");
+        videoListContainer.appendChild(videoLink);
+        videoListContainer.appendChild(document.createElement("br"));
+      }
+    })
+    .catch(error => {
+      console.error("Error fetching YouTube feed:", error);
+    });
+}
+
+// Call the function with the YouTube feed URL
+fetchYouTubeVideos("https://www.youtube.com/feeds/videos.xml?channel_id=UCGIY_O-8vW4rfX98KlMkvRg");
+
+	</script>
 <audio id="bgm" src="snd/bgm.mp3" loop=1 auto autoplay oncanplay="audioFade()"></audio>
 </html>

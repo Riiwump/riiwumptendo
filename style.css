@@ -115,6 +115,12 @@ canvas {
 
 .wii:hover { background: transparent url(img/wii.png) center left no-repeat; 	background-color: rgba(52, 203, 255, 0.4);	background-position:5px 0%;}
 .ds:hover { background: transparent url(img/ds.png) center left no-repeat; 	background-color: rgba(255, 8, 52, 0.4); 	background-position:5px 0%;}
+.nintendo:hover {
+	background: transparent url(img/nintendo.png) center left no-repeat;	
+	background-color: #e60012;
+	background-position:5px 0%;
+	background-size: 40px 35px;
+}
 
 .red:hover {
     background: transparent url(img/wumpus.png) center left no-repeat;
